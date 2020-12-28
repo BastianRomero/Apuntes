@@ -1,0 +1,9 @@
+Comandos de red
+
+Comando: netstat -a
+Uso: Permite mostrar todas las conexiones de red en un sistema. 
+
+Comando: traceroute xxx.xxx.xxx.xxx 
+Uso: Permite mostrar todos los hosts por donde pasa un paquete en la red hasta llegar a su destino. 
+
+IP de carga drive: 172.217.192.95

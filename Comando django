@@ -1,0 +1,13 @@
+Comando django
+
+Comando: django-admin startproyect mysite
+Uso: Iniciar un proyecto en Django, este comando creara el archivo "manage.py" y otros archivos necesarios dentro de la carpeta "mysite"
+
+Comando: python manage.py help
+Uso: Ver comandos validos con el archivo "manage.py"
+
+Comando: python manage.py migrate
+Uso: generar el archivo de base de datos
+
+Comando: python manage.py runserver 
+Uso: Poner en funcionamiento un servidor local donde ser visualiza la página creada.

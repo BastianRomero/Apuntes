@@ -1,0 +1,82 @@
+
+Comando: git init 
+
+Uso: Crea un subdirectorio llamado .git (carpeta oculta). Esta carpeta contiene los archivos necesarios del repositorio. Esta carpeta aparece cuando se ha clonado un repositorio de algun servidor, iniciando así el repositorio para que pueda ser modificado. Este será nuestro directorio de trabajo (Working directory).
+
+-----------------------------------------------------------------------------------
+
+Comando: git add . 
+
+Uso: Se utiliza para añadir los archivos a del directorio de trabajo al área de preparación (Staging area). Dependiendo de lo que se ha hecho en los archivos del directorio existen tres estados:
+
+1- Archivos modificados
+2- Archivos sin cambio
+3- Archivos eliminados
+
+Comando: git add README
+
+Uso: Añade al directorio de trabajo solo el archivo "README"
+
+------------------------------------------------------------------------------------
+
+Comando: git clone
+Comando: git clone https://github.com/NombreUsuario/repositorio
+
+Uso: Se utiliza para copiar un repositorio de un servidor al equipo local.
+
+Comando: git clone https://github.com/NombreUsuario/repositorio otroNombre
+
+Uso: Se puede especificar un nombre distinto al que viene por defecto, así los archivos del repositorio se guardaran en esta carpeta.
+
+------------------------------------------------------------------------------
+
+Comando: git status
+
+Uso: Ver el estado de los archivos del repositorio.
+
+Estados: Untracked, Unmodified, Modified, Staged.
+
+Comando: git status -s || git status --short
+
+Uso: Ver el estado de manera abreviada
+
+-------------------------------------------------------------------------
+
+Script: .gitignore
+$ cat .gitignore
+*.[ao]
+*~
+
+Uso: Se ignoran los archivos terminados en .[], en el caso del ejemplo se ignoran los archivos terminados en ".a" | ".o" . Tambien se ignoran todos los archivos que terminen en "~".
+
+Más ejemplos de .gitignore:
+
+# ignora unicamente el archivo TODO de la raiz, no subdir/TODO
+/TODO
+# ignora todos los archivos del directorio build/
+build/
+# ignora doc/notes.txt, pero no este: doc/server/arch.txt
+doc/*.txt
+# ignora todos los archivos .txt del directorio doc/
+doc/**/*.txt
+
+-------------------------------------------------------------------------------
+
+Comando: git diff
+
+Uso: Muestra los cambios hechos de los archivos modificados, tiene mayor detalle que "git status" ya que muestra las lineas que se han cambiado.
+
+-------------------------------------------------------------------------------
+
+Comando: git commit -m "Mensaje a subir"
+Uso: Confirmar el estado de los archivos, además escribir el commit que se incluira al momento de subir el o los archivos nuevos o modificados.
+
+Comando: git commit -a -m "Mensaje a subir"
+Uso: Se antepone la opción "-a" para simplificar el flujo de datos, esto es equivalente a usar "git add ."
+
+-------------------------------------------------------------------------------
+
+Comando: git rm
+Uso: Elimina el archivo dél directorio de trabajo.
+Comando: git rm -f 
+Uso: Forzar eliminación e caso de que esté en el indice. 
